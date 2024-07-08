@@ -1,5 +1,4 @@
 import pygame
-import sys
 
 #iniciar pygame
 pygame.init()
@@ -8,17 +7,17 @@ pygame.init()
 size = (800, 600)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Mi primer juego con Pygame")
+running = True
 
 #variables de colores
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
 #loop principal del juego
-while True:
+while running:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
-			pygame.quit()
-			sys.exit()
+			running = False
 
 #actualizar pantalla
 screen.fill(WHITE)
